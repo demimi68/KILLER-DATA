@@ -1,0 +1,516 @@
+:root {
+    --rouge: #E02424;
+    --degtextrouge: linear-gradient(110deg, #F25A5A 0%, #DC2828 100%);
+    --degcoeur: radial-gradient(circle at top, #E02424 0%, #7A1414 100%);
+    --blanc: #F2F2F2;
+    --noir: #0A0A0A;
+    --gris: #999999;
+
+    --seriftext: 'Playfair Display', serif;
+    --basictext: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--noir);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    border-bottom: 1px solid;
+    border-color: var(--gris);
+    color: var(--gris);
+    font-family: var(--basictext);
+    font-size: 14px;
+}
+
+header div a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+header div a.active {
+    color: var(--blanc);
+    border-bottom: 1px solid #e02424;
+}
+
+.logo{
+    text-decoration: none;
+    color: var(--gris);
+}
+
+
+/* PARTIE 1 */
+.part1 {
+    padding: 100px 120px;
+}
+
+.part1 h1 {
+    font-family: var(--seriftext);
+    font-size: 60px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.titre1 {
+    background: var(--degtextrouge);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.titre2 {
+    color: var(--blanc);
+}
+
+.soustitre1 {
+    color: var(--gris);
+    margin-bottom: 60px;
+    font-family: var(--basictext);
+    font-size: 18px;
+}
+
+/* FILTRE */
+.filtre1 {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid;
+    border-color: var(--gris);
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 80px;
+    background-color: var(--noir);
+}
+
+.nom{
+    font-size: 24px;
+    margin-right: 100px;
+    margin-left: 20px;
+    font-family: var(--seriftext);
+    color: var(--rouge);
+    font-weight: bold;
+}
+
+/* MENU DÉROULANT */
+.Menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--noir); /* Fond très sombre */
+    width: 400px; 
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 100;
+}
+
+.Menu.open {
+    max-height: 500px;
+    border-color: #444;
+}
+
+/* En-tête (18 indicateurs...) */
+.Menu-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid #222;
+    color: #888;
+    font-family: var(--basictext);
+    font-size: 13px;
+    align-items: center;
+}
+
+/* Scroll dans le Menu */
+.Menu-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.Menu-content::-webkit-scrollbar-thumb {
+    background-color: var(--rouge);
+    border-radius: 3px;
+}
+
+.Menu-content::-webkit-scrollbar-track {
+    background: #111;
+}
+
+/* Container de la liste */
+.Menu-content {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+/* Style de chaque ligne */
+.Menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Texte à gauche, point à droite */
+    padding: 18px 25px;
+    cursor: pointer;
+    border-bottom: 1px solid #1a1a1a;
+    transition: 0.2s;
+}
+
+.Menu-item:hover {
+    background-color: #151515;
+}
+
+.fleche-filtre {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.Menu.open ~ .fleche-filtre,
+.filtre1 .fleche-filtre {
+    transform: rotate(0deg);
+}
+
+.filtre1 .Menu.open + .fleche-filtre {
+    transform: rotate(180deg);
+}
+
+.filtre1:has(.Menu.open) .fleche-filtre {
+    transform: rotate(180deg);
+}
+
+
+/* Le texte de l'indicateur */
+.item-label {
+    font-family: var(--seriftext);
+    color: var(--rouge);
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Le point rouge lumineux */
+.item-status {
+    width: 10px;
+    height: 10px;
+    background-color: var(--rouge);
+    border-radius: 50%;
+    /* L'effet de lumineux */
+    box-shadow: 0 0 8px 2px rgba(224, 36, 36, 0.6); 
+}
+
+
+/* STATS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.card {
+    border: 1px solid var(--gris);
+    padding: 20px;
+}
+
+.titre3 {
+    font-size: 12px;
+    color: var(--gris);
+    font-family: var(--basictext);
+    margin-bottom: 10px;
+}
+
+.info1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: var(--basictext);
+    background: var(--degtextrouge);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 5px;
+}
+
+.soustitre2 {
+    color: var(--gris);
+    font-family: var(--basictext);
+    font-size: 14px;
+}
+
+/* MAP */
+.part2 {
+    text-align: center;
+}
+
+.part2 h2{
+    font-size: 36px;
+    color: var(--blanc);
+    font-family: var(--seriftext);
+    font-weight: bold;
+}
+
+.carte {
+    margin-top: -150px;
+}
+
+.carte svg path {
+  pointer-events: all;
+  cursor: pointer;
+  transition: fill 0.2s;
+}
+
+/* Hover SVG carte */
+.carte svg path:hover {
+    fill: var(--rouge);
+}
+
+.carte svg path.active {
+  fill: #bc1f1f;
+}
+
+/* Désactive hover et pointer pour certains éléments */
+.carte svg #Sang,
+.carte svg #Sang_2,
+.carte svg #Sang_3,
+.carte svg #Sang_4,
+.carte svg #point1,
+.carte svg #point2,
+.carte svg #point3,
+.carte svg #Ombre1,
+.carte svg #Ombre2 {
+    pointer-events: none; /* ne peut pas être cliqué */
+    cursor: default;      /* supprime la main au survol */
+}
+
+/* On annule le hover rouge pour ces éléments */
+.carte svg #Sang:hover,
+.carte svg #Sang_2:hover,
+.carte svg #Sang_3:hover,
+.carte svg #Sang_4:hover,
+.carte svg #point1:hover,
+.carte svg #point2:hover,
+.carte svg #point3:hover,
+.carte svg #Ombre1:hover,
+.carte svg #Ombre2:hover {
+    fill: inherit; /* garde la couleur définie dans le SVG */
+}
+
+/* Désactive hover et clic pour le couteau et tout ce qu’il contient */
+.carte svg #Couteau,
+.carte svg #Couteau * {
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Annule le hover rouge pour le couteau */
+.carte svg #Couteau:hover,
+.carte svg #Couteau *:hover {
+    fill: inherit;
+}
+
+.ligne{
+    margin-top: 50px;
+    height: 1px;
+    background-color: var(--gris);
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+/* PARTIE 3 */
+.part3 {
+    padding: 45px 120px;
+}
+
+.part3 h2{
+    font-size: 36px;
+    color: var(--blanc);
+    font-family: var(--seriftext);
+    font-weight: bold;
+}
+
+.soustitre3 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: var(--gris);
+    font-family: var(--basictext);
+}
+
+.soustitre4 {
+    font-size: 14px;
+    margin-top: 5px;
+    color: var(--gris);
+    font-family: var(--basictext);
+    font-style: italic;
+}
+
+.seringues {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.seringue-conteneur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seringue-conteneur .annee {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 36px;
+    font-family: var(--basictext);
+    background: var(--degtextrouge);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 20px;
+    background-color: var(--noir);
+    color: var(--blanc);
+    padding: 60px 120px 30px 120px;
+    border-top: 1px solid rgba(224, 36, 36, 0.3);
+    font-family: var(--basictext);
+    margin-top: 80px;
+}
+
+/* Conteneur global du contenu du footer */
+.contenuFooter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* autorise les éléments flex à passer à la ligne quand il n’y a plus assez de place sur une seule ligne. */
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Bloc texte de présentation */
+.paragrapheFooter {
+    flex: 1.5;
+    min-width: 280px;
+}
+
+.titreFooter {
+    font-family: var(--seriftext);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--blanc);
+}
+
+.titreFooter span {
+    color: var(--rouge);
+    text-shadow: 0 0 15px rgba(224, 36, 36, 0.4);
+}
+
+/* Texte descriptif */
+.paragrapheFooter p {
+    color: var(--gris);
+    font-size: 15px;
+    line-height: 1.6;
+    /* l’interligne */
+    max-width: 400px;
+}
+
+.navFooter {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+/* Titres des groupes de liens */
+.groupeNav h4 {
+    color: var(--blanc);
+    font-family: var(--seriftext);
+    text-transform: uppercase;
+    /* affichage du texte en MAJUSCULES */
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.groupeNav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.groupeNav ul li {
+    margin-bottom: 12px;
+}
+
+/* Liens du footer */
+.groupeNav ul li a {
+    color: var(--gris);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.groupeNav ul li a:hover {
+    color: var(--rouge);
+    padding-left: 5px;
+}
+
+.BottomFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid var(--gris);
+    font-size: 14px;
+    color: var(--gris);
+}
+
+.textRouge {
+    color: var(--rouge);
+    font-weight: 500;
+}
+
+.StatueFooter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.pointRouge {
+    width: 6px;
+    height: 6px;
+    background-color: var(--rouge);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--rouge);
+}
+
+.PasCurseur {
+    color: var(--gris);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+
+@media (max-width: 768px) {
+    .contenuFooter {
+        flex-direction: column;
+    }
+
+    .navFooter {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 50px;
+    }
+}

@@ -1,0 +1,190 @@
+:root {
+    --rouge: #E02424;
+    --degtextrouge: linear-gradient(110deg, #F25A5A 0%, #DC2828 100%);
+    --degcoeur: radial-gradient(circle at top, #E02424 0%, #7A1414 100%);
+    --blanc: #F2F2F2;
+    --noir: #0A0A0A;
+    --gris: #999999;
+
+    --seriftext: 'Playfair Display', serif;
+    --basictext: 'Outfit', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--noir);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    border-bottom: 1px solid;
+    border-color: var(--gris);
+    color: var(--gris);
+    font-family: var(--basictext);
+    font-size: 14px;
+}
+
+header div a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+header div a.active {
+    color: var(--blanc);
+    border-bottom: 1px solid #e02424;
+}
+
+.logo{
+    text-decoration: none;
+    color: var(--gris);
+}
+
+/*TITRE + STATS*/
+.titre {
+    padding: 20px;
+    text-align: center;
+    z-index: 100;
+}
+
+h1 {
+    font-family: var(--seriftext);
+    font-size: 40px;
+    margin: 0;
+    color: var(--rouge);
+    text-shadow: 0 4px 50px var(--rouge);
+}
+
+#stats {
+    margin-top: 15px;
+    font-size: 20px;
+    color: var(--blanc);
+    font-family: var(--basictext);
+}
+
+/* ZONE DE JEU */
+main {
+    flex-grow: 1;
+    position: relative;
+}
+
+/* cibles */
+.cible {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+    z-index: 10;
+    /* Transition fluide */
+    transition: top 0.8s ease-in-out, left 0.8s ease-in-out, transform 0.2s, opacity 0.3s;
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cible svg {
+
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px rgba(224, 36, 36, 0.5));
+}
+
+.cible.fade-out {
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* SVG de la tache */
+.splat-svg {
+    position: absolute;
+    /* Indispensable */
+    width: 130px;
+    /* Ajuste selon ton SVG */
+    height: 130px;
+    pointer-events: none;
+    /* Pour ne pas bloquer les clics suivants */
+    z-index: 100;
+
+    /* C'est cette ligne qui centre la tache sous la souris */
+    transform: translate(-50%, -50%);
+
+    /* Animation */
+    animation: splatAnim 0.6s ease-out forwards;
+}
+
+@keyframes splatAnim {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+.ui-layer {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 15px 40px;
+    background: var(--rouge);
+    color: var(--blanc);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--basictext);
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+h2{
+    color: var(--blanc);
+    font-family: var(--seriftext);
+    font-size: 56px;
+}
+
+#overlay button{
+    margin-top:20px; 
+    font-size: 18px;
+}
+
+#start-btn {
+    font-size: 18px;
+}
+

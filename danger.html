@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danger</title>
+    <link rel="stylesheet" href="style/danger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="accueil.html" class="logo">KILLER DATA</a>
+        <div>
+            <a href="accueil.html">Accueil</a>
+            <a href="evolution.html">Évolution</a>
+            <a href="analyse.html">Analyse</a>
+            <a class="active" href="danger.html">Danger</a>
+        </div>
+    </header>
+
+    <!-- Titre -->
+    <div class="titre">
+        <h1>Zone de danger</h1>
+        <div id="stats">Temps: <span id="timer">15</span>s | Score: <span id="score">0</span></div>
+    </div>
+
+    <!-- Zone où les cibles apparaissent -->
+    <main id="game-zone"></main>
+
+    <!-- Bouton de lancement -->
+    <div class="ui-layer">
+        <button id="start-btn">C'est parti</button>
+    </div>
+
+    <!-- Écran de fin -->
+    <div id="overlay">
+        <h2>Score : <span id="final-score">0</span></h2>
+        <button onclick="location.reload()">Rejouer</button>
+    </div>
+
+    <script src="script/danger.js"></script>
+</body>
+
+</html>

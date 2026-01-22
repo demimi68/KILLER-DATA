@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criminalité en France</title>
+    <link rel="stylesheet" href="style/accueil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="accueil.html" class="logo">KILLER DATA</a>
+        <div>
+            <a class="active" href="accueil.html">Accueil</a>
+            <a href="evolution.html">Évolution</a>
+            <a href="analyse.html">Analyse</a>
+            <a href="danger.html">Danger</a>
+        </div>
+    </header>
+
+    <!-- PARTIE 1 -->
+    <section class="part1">
+        <div class="donnee">
+            <div class="point"></div>
+            <div class="text1"> Données 2016 - 2024</div>
+        </div>
+
+        <svg class="fond1" width="1017" height="834" viewBox="0 0 1017 834" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.2" filter="url(#filter0_f_59_11)">
+                <ellipse cx="508.5" cy="402.5" rx="358.5" ry="281.5" fill="#E02424" />
+                <path
+                    d="M508.5 121.5C706.337 121.5 866.5 247.414 866.5 402.5C866.5 557.586 706.337 683.5 508.5 683.5C310.663 683.5 150.5 557.586 150.5 402.5C150.5 247.414 310.663 121.5 508.5 121.5Z"
+                    stroke="#E02424" />
+            </g>
+            <defs>
+                <filter id="filter0_f_59_11" x="0" y="-29" width="1017" height="863" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_59_11" />
+                </filter>
+            </defs>
+        </svg>
+
+        <!-- Titre -->
+        <h1>
+            <div class="titre1">Criminalité</div>
+            <div class="titre2"> en France</div>
+        </h1>
+
+        <p class="soustitre1">Explorer les données officielles pour analyser et comprendre la criminalité sur le
+            territoire français.</p>
+
+        <div class="filtre1" id="filtre-type">
+            <!-- TEXTE DYNAMIQUE -->
+            <div class="nom" id="type-selection">Sélectionnez un indicateur</div>
+            <svg class="fleche-filtre" width="32" height="16" viewBox="0 0 32 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M29.516 0.42054L17.0233 12.7158C16.7507 12.9855 16.3827 13.1367 15.9993 13.1367C15.6159 13.1367 15.2479 12.9855 14.9754 12.7158L2.48262 0.423208C2.20835 0.153689 1.8392 0.00266764 1.45467 0.00266764C1.07014 0.00266764 0.700988 0.153689 0.42672 0.423208C0.291663 0.554872 0.184329 0.712238 0.111043 0.886033C0.0377564 1.05983 -2.46114e-07 1.24653 -2.46114e-07 1.43515C-2.46114e-07 1.62376 0.0377564 1.81047 0.111043 1.98426C0.184329 2.15806 0.291663 2.31542 0.42672 2.44709L12.9168 14.7397C13.7395 15.5474 14.8464 16 15.9993 16C17.1523 16 18.2592 15.5474 19.0818 14.7397L31.5719 2.44709C31.7074 2.31538 31.8151 2.15785 31.8886 1.98381C31.9621 1.80977 32 1.62275 32 1.43381C32 1.24488 31.9621 1.05786 31.8886 0.88382C31.8151 0.709779 31.7074 0.552246 31.5719 0.42054C31.2976 0.151021 30.9285 5.68434e-08 30.544 5.68434e-08C30.1594 5.68434e-08 29.7903 0.151021 29.516 0.42054Z"
+                    fill="#999999" />
+            </svg>
+
+            <!-- MENU DÉROULANT -->
+            <div class="Menu" id="Menu-types"></div>
+
+        </div>
+
+
+        <div class="text2" id="total-label">TOTAL</div>
+        <div class="chiffre-total" id="total-value">-</div>
+
+        <!-- Boutons -->
+        <div class="boutons">
+            <a class="btn1" href="evolution.html">Explorer les données <svg class="flechedroite" width="20" height="15"
+                    viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.75 7.25L18.75 7.25M18.75 7.25L12 13.75M18.75 7.25L12 0.75" stroke="#F2F2F2"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+            <a class="btn2" href="analyse.html">Voir par région</a>
+        </div>
+
+    </section>
+
+    <!-- PARTIE 2 -->
+    <section class="part2">
+        <div class="stats">
+            <div class="card">
+                <div class="titre3">PÉRIODE</div>
+                <div class="info1">-</div>
+                <div class="soustitre2">9 années</div>
+            </div>
+            <div class="card">
+                <div class="titre3">RÉGIONS ANALYSÉES</div>
+                <div class="info1">-</div>
+                <div class="soustitre2">Territoires français</div>
+            </div>
+            <div class="card">
+                <div class="titre3">RÉGION LA PLUS TOUCHÉE</div>
+                <div class="info1">-</div>
+                <div class="soustitre2">- cas</div>
+            </div>
+            <div class="card">
+                <div class="titre3">TENDANCE</div>
+                <div class="info1">-</div>
+                <div class="soustitre2">Évolution sur la période</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTIE 3 -->
+    <section class="part3">
+        <h2>Évolution temporelle</h2>
+        <p class="soustitre3">Le rythme du cœur varie selon le nombre total de cas pour l’indicateur et l’année
+            sélectionnés.</p>
+        <p class="soustitre4">Sélectionnez un indicateur et une année pour observer le rythme du cœur.</p>
+
+
+        <!-- Coeur -->
+        <div class="coeur-contenu">
+
+            <svg class="fond2" width="744" height="744" viewBox="0 0 744 744" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.2" filter="url(#filter0_f_77_240)">
+                    <circle cx="372" cy="372" r="222" fill="#E02424" />
+                    <circle cx="372" cy="372" r="221.5" stroke="#E02424" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_77_240" x="0" y="0" width="744" height="744" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_77_240" />
+                    </filter>
+                </defs>
+            </svg>
+
+            <!-- COEUR SVG -->
+            <div class="coeur">
+                <svg width="444" height="407" viewBox="0 0 444 407" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Coeur">
+                        <path id="Coeur-Principal"
+                            d="M222 321L202.28 303.088C132.24 239.719 86 197.789 86 146.632C86 104.702 118.912 72 160.8 72C184.464 72 207.176 82.9913 222 100.225C236.824 82.9913 259.536 72 283.2 72C325.088 72 358 104.702 358 146.632C358 197.789 311.76 239.719 241.72 303.088L222 321Z"
+                            fill="url(#paint0_radial_77_238)" />
+                        <path id="Trait1"
+                            d="M293.375 59.5C341.611 59.5 379.5 97.1028 379.5 145.321C379.5 174.741 366.191 201.548 342.699 230.188C320.67 257.045 289.733 285.46 252.526 319.11L245.002 325.912L222.5 346.324L199.998 325.912L192.474 319.11C155.267 285.46 124.33 257.045 102.301 230.188C78.8086 201.548 65.5 174.741 65.5 145.321C65.5001 97.1028 103.389 59.5 151.625 59.5C178.879 59.5 205.045 72.1457 222.121 91.9717L222.5 92.4111L222.879 91.9717C239.955 72.1457 266.121 59.5 293.375 59.5Z"
+                            stroke="#E02424" stroke-opacity="0.8" />
+                        <path id="Trait2"
+                            d="M301.925 41.5C356.011 41.5 398.5 83.8289 398.5 138.111C398.5 171.23 383.576 201.402 357.246 233.627C330.91 265.859 293.215 300.086 247.757 341.323H247.756L222.5 364.322L197.244 341.323H197.243C151.785 300.086 114.09 265.859 87.7539 233.627C61.4237 201.402 46.5 171.23 46.5 138.111C46.5002 83.8289 88.9891 41.5 143.075 41.5C173.635 41.5001 202.973 55.7344 222.12 78.0518L222.5 78.4941L222.88 78.0518C242.027 55.7344 271.365 41.5001 301.925 41.5Z"
+                            stroke="#E02424" stroke-opacity="0.6" />
+                        <path id="Trait3"
+                            d="M312.725 20.5C374.203 20.5 422.5 68.608 422.5 130.3C422.5 167.938 405.536 202.222 375.621 238.829C345.7 275.443 302.875 314.321 251.236 361.157V361.158L222.5 387.322L193.764 361.158V361.157L184.186 352.468C136.822 309.471 97.4297 273.155 69.3789 238.829C39.4637 202.222 22.5 167.938 22.5 130.3C22.5 68.608 70.797 20.5 132.275 20.5C167.011 20.5001 200.357 36.6766 222.12 62.0391L222.5 62.4814L222.88 62.0391C244.643 36.6766 277.989 20.5001 312.725 20.5Z"
+                            stroke="#E02424" stroke-opacity="0.4" />
+                        <path id="Trait4"
+                            d="M321.9 0.5C390.001 0.500198 443.5 53.7309 443.5 121.989C443.5 163.634 424.709 201.562 391.582 242.054C358.45 282.552 311.029 325.554 253.854 377.353H253.854L222 406.323L190.146 377.353H190.146C132.971 325.554 85.5504 282.552 52.418 242.054C19.2911 201.562 0.500048 163.634 0.5 121.989C0.5 53.7309 53.9989 0.500206 122.1 0.5C160.577 0.5 197.515 18.3981 221.621 46.46L222 46.9014L222.379 46.46C246.485 18.3981 283.423 0.5 321.9 0.5Z"
+                            stroke="#E02424" stroke-opacity="0.2" />
+                    </g>
+                    <defs>
+                        <radialGradient id="paint0_radial_77_238" cx="0" cy="0" r="1"
+                            gradientTransform="matrix(21.0241 127.776 -139.579 22.8445 222.657 121.8)"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E02424" />
+                            <stop offset="1" stop-color="#7A1414" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+
+            </div>
+        </div>
+
+        <!-- Rythme -->
+        <div class="rythme">
+            <!-- RYTHME SVG -->
+            <svg width="1357" height="100" viewBox="0 0 1357 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Rythme">
+                    <g id="Grille">
+                        <rect id="Rectangle 19" x="0.5" y="0.5" width="1355.63" height="93.2378" stroke="#808080"
+                            stroke-opacity="0.47" />
+                        <path id="Vector 3"
+                            d="M0.491211 10.3071H1356.14M1356.14 19.1419H0.491211M0.491211 28.9584H1356.14M1356.14 37.7932H0.491211M0.491211 47.1188H1356.14M1356.14 56.4444H0.491211M0.491211 65.77H1356.14M1356.14 75.0956H0.491211M0.491211 84.4213H1356.14"
+                            stroke="#808080" stroke-opacity="0.47" />
+                        <path id="Vector 4"
+                            d="M67.7334 0.490845V93.747M135.467 93.747V0.490845M203.2 0.490845V94.2379M270.934 93.747V0.490845M338.667 0.490845V93.747M406.401 93.747V0.490845M474.134 0.490845V93.747M541.867 93.747V0.490845M610.092 0.490845V93.747M677.825 93.747V0.490845"
+                            stroke="#808080" stroke-opacity="0.47" />
+                        <path id="Vector 5"
+                            d="M745.56 0.490845V93.747M813.293 93.747V0.490845M881.026 0.490845V93.747M949.251 93.747V0.490845"
+                            stroke="#808080" stroke-opacity="0.47" />
+                        <path id="Vector 6"
+                            d="M1016.98 0.490845V93.747M1084.72 93.747V0.490845M1152.45 0.490845V93.747M1220.18 93.747V0.490845"
+                            stroke="#808080" stroke-opacity="0.47" />
+                        <path id="Vector 7" d="M1287.92 0.490845V93.747" stroke="#808080" stroke-opacity="0.47" />
+                    </g>
+                    <path id="Barre-Rythme"
+                        d="M1.47266 72.6416L38.2843 90.3112L53.9906 17.1787L61.8438 27.486L73.6235 92.7653L101.6 68.2242L121.724 79.0223L217.925 75.5865L268.971 60.8619L340.14 65.2793L372.534 81.4764L700.403 77.059L736.724 66.2609L777.953 77.059L810.838 72.1508L833.907 91.2928L847.65 19.142L854.031 28.4676L867.283 95.7102L898.204 74.1141L1016 79.0223L1094.04 58.8986L1166.19 79.0223L1347.8 75.5865"
+                        stroke="#E02424" stroke-width="4" />
+                </g>
+            </svg>
+
+        </div>
+
+        <!-- Années -->
+        <div class="annees">
+            <div class="active">2016</div>
+            <div>2017</div>
+            <div>2018</div>
+            <div>2019</div>
+            <div>2020</div>
+            <div>2021</div>
+            <div>2022</div>
+            <div>2023</div>
+            <div>2024</div>
+        </div>
+
+        <div class="stat">
+            <div class="box">
+                <div class="titre4">État</div>
+                <div class="info2">-</div>
+            </div>
+            <div class="box">
+                <div class="titre4">Nombre de victimes</div>
+                <div class="info2">-</div>
+            </div>
+            <div class="box">
+                <div class="titre4">Taux pour mille</div>
+                <div class="info2">-</div>
+            </div>
+            <div class="box">
+                <div class="titre4">Évolution / an passé</div>
+                <div class="info2">-</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTIE 4 -->
+    <section class="part4">
+        <a class="card2" href="evolution.html">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M27.2 3.2H24V1.6C24 1.17565 23.8314 0.768687 23.5314 0.468629C23.2313 0.168571 22.8243 0 22.4 0C21.9757 0 21.5687 0.168571 21.2686 0.468629C20.9686 0.768687 20.8 1.17565 20.8 1.6V3.2H11.2V1.6C11.2 1.17565 11.0314 0.768687 10.7314 0.468629C10.4313 0.168571 10.0243 0 9.6 0C9.17565 0 8.76869 0.168571 8.46863 0.468629C8.16857 0.768687 8 1.17565 8 1.6V3.2H4.8C3.52696 3.2 2.30606 3.70571 1.40589 4.60589C0.505713 5.50606 0 6.72696 0 8V27.2C0 28.473 0.505713 29.6939 1.40589 30.5941C2.30606 31.4943 3.52696 32 4.8 32H27.2C28.473 32 29.6939 31.4943 30.5941 30.5941C31.4943 29.6939 32 28.473 32 27.2V8C32 6.72696 31.4943 5.50606 30.5941 4.60589C29.6939 3.70571 28.473 3.2 27.2 3.2ZM28.8 27.2C28.8 27.6243 28.6314 28.0313 28.3314 28.3314C28.0313 28.6314 27.6243 28.8 27.2 28.8H4.8C4.37565 28.8 3.96869 28.6314 3.66863 28.3314C3.36857 28.0313 3.2 27.6243 3.2 27.2V16H28.8V27.2ZM28.8 12.8H3.2V8C3.2 7.57565 3.36857 7.16869 3.66863 6.86863C3.96869 6.56857 4.37565 6.4 4.8 6.4H8V8C8 8.42435 8.16857 8.83131 8.46863 9.13137C8.76869 9.43143 9.17565 9.6 9.6 9.6C10.0243 9.6 10.4313 9.43143 10.7314 9.13137C11.0314 8.83131 11.2 8.42435 11.2 8V6.4H20.8V8C20.8 8.42435 20.9686 8.83131 21.2686 9.13137C21.5687 9.43143 21.9757 9.6 22.4 9.6C22.8243 9.6 23.2313 9.43143 23.5314 9.13137C23.8314 8.83131 24 8.42435 24 8V6.4H27.2C27.6243 6.4 28.0313 6.56857 28.3314 6.86863C28.6314 7.16869 28.8 7.57565 28.8 8V12.8Z"
+                    fill="#E02424" />
+            </svg>
+            <div class="titre5">Évolution</div>
+            <p>Analysez les tendances année par année</p>
+        </a>
+
+        <a class="card2" href="analyse.html">
+            <svg width="64" height="32" viewBox="0 0 64 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M63.054 0.945458C62.7567 0.645875 62.403 0.408089 62.0132 0.245818C61.6235 0.0835463 61.2055 0 60.7833 0C60.3611 0 59.9431 0.0835463 59.5534 0.245818C59.1637 0.408089 58.8099 0.645875 58.5126 0.945458L38.3963 21.0821L24.6762 7.33804C24.3789 7.03846 24.0252 6.80068 23.6355 6.6384C23.2458 6.47613 22.8278 6.39259 22.4056 6.39259C21.9834 6.39259 21.5654 6.47613 21.1756 6.6384C20.7859 6.80068 20.4322 7.03846 20.1349 7.33804L0.946006 26.5158C0.646249 26.8129 0.408325 27.1665 0.24596 27.556C0.0835939 27.9455 0 28.3632 0 28.7852C0 29.2071 0.0835939 29.6249 0.24596 30.0144C0.408325 30.4039 0.646249 30.7574 0.946006 31.0545C1.24332 31.3541 1.59703 31.5919 1.98676 31.7542C2.37648 31.9165 2.7945 32 3.21669 32C3.63888 32 4.0569 31.9165 4.44662 31.7542C4.83635 31.5919 5.19006 31.3541 5.48737 31.0545L22.4056 14.1142L36.1256 27.8582C36.4229 28.1578 36.7766 28.3956 37.1664 28.5579C37.5561 28.7202 37.9741 28.8037 38.3963 28.8037C38.8185 28.8037 39.2365 28.7202 39.6262 28.5579C40.0159 28.3956 40.3697 28.1578 40.667 27.8582L63.054 5.48419C63.3537 5.18706 63.5917 4.83354 63.754 4.44405C63.9164 4.05455 64 3.63678 64 3.21483C64 2.79288 63.9164 2.3751 63.754 1.98561C63.5917 1.59611 63.3537 1.2426 63.054 0.945458Z"
+                    fill="#E02424" />
+            </svg>
+            <div class="titre5">Analyse</div>
+            <p>Croisez les données population / taux</p>
+        </a>
+
+        <a class="card2" href="danger.html">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M31.2837 25.1548C30.3615 24.2334 28.8911 24.2039 27.9533 25.0695L24.2611 21.3772C25.2699 19.8306 25.8586 17.9845 25.8586 16.0001C25.8586 14.0157 25.2699 12.1696 24.2611 10.623L27.9324 6.95163C28.8706 7.81767 30.3405 7.78936 31.2628 6.86671C32.2088 5.92314 32.2183 4.39824 31.2849 3.46451C30.7225 2.90206 29.9459 2.68503 29.2099 2.80688C29.3453 2.06022 29.1295 1.26639 28.5568 0.693681C27.6239 -0.239637 26.1014 -0.230202 25.1554 0.716245C24.234 1.63849 24.2044 3.10882 25.0701 4.04665L21.3774 7.73931C19.7788 6.69466 17.9099 6.13958 16.0003 6.14221C14.0906 6.13958 12.2218 6.69466 10.6231 7.73931L6.95142 4.06758C7.81705 3.12974 7.78833 1.65982 6.86691 0.737167C5.92128 -0.208048 4.39803 -0.217894 3.46471 0.715014C2.90185 1.27788 2.68483 2.05489 2.80667 2.79047C2.06002 2.65509 1.26578 2.87129 0.69307 3.44317C-0.240247 4.37649 -0.22917 5.89893 0.715634 6.84456C1.63828 7.76762 3.10903 7.79593 4.04727 6.9303L7.73951 10.6225C6.7303 12.1692 6.142 14.0153 6.142 15.9997C6.142 17.9841 6.7303 19.8302 7.73951 21.3768L4.06778 25.0486C3.12995 24.1829 1.66003 24.2117 0.737377 25.1331C-0.207837 26.0787 -0.217273 27.602 0.715223 28.5353C1.27808 29.0981 2.0551 29.3152 2.79067 29.1933C2.65529 29.94 2.87149 30.7342 3.44338 31.3069C4.3767 32.2402 5.89913 32.2292 6.84476 31.2844C7.76741 30.3617 7.79612 28.891 6.9305 27.9527L10.5103 24.3729V26.8122C12.0577 28.0823 13.9984 28.7754 16.0003 28.7728C18.0023 28.7755 19.9431 28.0824 21.4906 26.8122V24.3729L25.0491 27.9314C24.1831 28.8696 24.211 30.34 25.1337 31.2622C26.0776 32.2083 27.6025 32.2177 28.5359 31.2844C29.0983 30.7219 29.3153 29.9449 29.1935 29.2093C29.9401 29.3451 30.734 29.1289 31.3067 28.5566C32.2396 27.6233 32.2301 26.1013 31.2837 25.1548ZM13.3107 19.6874C12.8108 19.6874 12.3314 19.4888 11.9779 19.1354C11.6244 18.7819 11.4258 18.3024 11.4258 17.8025C11.4258 17.3026 11.6244 16.8232 11.9779 16.4697C12.3314 16.1162 12.8108 15.9176 13.3107 15.9176C14.3507 15.9176 15.1941 16.7632 15.1941 17.8036C15.1941 18.844 14.3503 19.6874 13.3107 19.6874ZM18.6895 19.7149C18.1898 19.7149 17.7107 19.5164 17.3574 19.1631C17.0041 18.8098 16.8056 18.3307 16.8056 17.831C16.8056 17.3314 17.0041 16.8522 17.3574 16.499C17.7107 16.1457 18.1898 15.9472 18.6895 15.9472C18.9402 15.9419 19.1894 15.9868 19.4225 16.0791C19.6557 16.1715 19.868 16.3094 20.0472 16.4848C20.2263 16.6603 20.3687 16.8697 20.4658 17.1009C20.563 17.3321 20.6131 17.5803 20.6131 17.831C20.6131 18.0818 20.563 18.33 20.4658 18.5612C20.3687 18.7924 20.2263 19.0018 20.0472 19.1773C19.868 19.3527 19.6557 19.4906 19.4225 19.583C19.1894 19.6753 18.9402 19.7201 18.6895 19.7149Z"
+                    fill="#E02424" />
+            </svg>
+
+            <div class="titre5">Danger</div>
+            <p>Seuls les plus rapides s’en sortiront…</p>
+        </a>
+    </section>
+
+<!-- Footer -->
+    <footer>
+        <div class="contenuFooter">
+
+            <!-- Présentation du projet -->
+            <div class="paragrapheFooter">
+                <h3 class="titreFooter">Criminalité <span>en France</span></h3>
+                <p>Plateforme d'analyse et de visualisation cartographique des indicateurs de sécurité sur le territoire
+                    français.</p>
+            </div>
+
+            <div class="navFooter">
+
+                <!-- Groupe Navigation -->
+                <div class="groupeNav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="evolution.html">Évolution</a></li>
+                        <li><a href="analyse.html">Analyse</a></li>
+                        <li><a href="#">Danger</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Groupe Données -->
+                <div class="groupeNav">
+                    <h4>Donnée</h4>
+                    <ul>
+                        <li>
+                            <div class="PasCurseur">Fichier JSON</div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Groupe À propos -->
+                <div class="groupeNav">
+                    <h4>À propos</h4>
+                    <ul>
+                        <li>
+                            <div class="PasCurseur">HTML / CSS </div>
+                        </li>
+                        <li>
+                            <div class="PasCurseur">Javascript</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bas du footer -->
+        <div class="BottomFooter">
+            <p>&copy; Projet réalisé par Emilie Deiber — <span class="textRouge">Données Criminalité France
+                    2016-2024</span></p>
+            <div class="StatueFooter">
+                <span class="pointRouge"></span> Système Opérationnel
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script/accueil.js"></script>
+</body>
+
+</html>
